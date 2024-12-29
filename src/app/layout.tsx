@@ -81,6 +81,16 @@ export const metadata: Metadata = {
     images: siteConfig.ogImage,
     siteName: siteConfig.name,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og-image.png`],
+    creator: "@taiwoolapade",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
