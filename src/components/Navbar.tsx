@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import {
   Briefcase,
+  Dock,
   FolderGit2,
   GraduationCap,
   HomeIcon,
@@ -9,6 +10,7 @@ import {
   MoreHorizontal,
   User,
 } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -57,8 +59,16 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
-  return <div></div>;
+  }, []);
+  return <div className={`fixed top-5 right-0 left-0 px-0 sm:px-5 m-auto w-full sm:w-fit bg-transparent z-[+9999999] ${scrolling ? "hidden":"block"}`}>
+    <Dock className="items-end pb-3 rounded-full">
+        {navLinks.map((item index)=> (
+            <Link href={item.href} key={index}>
+
+            </Link>
+        ))}
+    </Dock>
+  </div>;
 };
 
 export default Navbar;
