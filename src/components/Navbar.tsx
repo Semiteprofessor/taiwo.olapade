@@ -9,6 +9,8 @@ import {
   MoreHorizontal,
   User,
 } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const navLinks = [
@@ -44,6 +46,18 @@ const Navbar = () => {
       href: "/more",
     },
   ];
+
+  const [scrolling, setScrolling] = useState<Boolean>(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolling = window.scrollY > 0;
+      setScrolling(isScrolling);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return <div></div>;
 };
 
