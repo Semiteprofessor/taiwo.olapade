@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Rubik } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "./page";
+import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,7 +10,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const geistMorubikno = Rubik({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: "600",
   variable: "--font-rubik",
@@ -102,9 +103,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${rubik.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
