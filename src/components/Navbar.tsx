@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import {
   Briefcase,
   FolderGit2,
@@ -49,7 +48,7 @@ const Navbar = () => {
   ];
 
   const [scrolling, setScrolling] = useState<Boolean>(false);
-  const pathname = usePathname();
+//   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
