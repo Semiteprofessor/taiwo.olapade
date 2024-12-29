@@ -1,6 +1,10 @@
 "use client";
 
-import { type SpringOptions, AnimatePresence } from "framer-motion";
+import {
+  type SpringOptions,
+  AnimatePresence,
+  MotionValue,
+} from "framer-motion";
 
 const DOCK_HEIGHT = 128;
 const DEFAULT_MAGNIFICATION = 80;
@@ -17,16 +21,28 @@ type DockProps = {
 };
 
 type DockItemProps = {
-    className?: string;
-    children?: React.ReactNode;
-}
+  className?: string;
+  children?: React.ReactNode;
+};
 
 type DockLabelProos = {
-    className?: string;
-    children?: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 };
 
 type DockIconProps = {
-    className?: string;
-    children?: React.ReactNode;
-}
+  className?: string;
+  children?: React.ReactNode;
+};
+
+type DockContextType = {
+  mouseX: MotionValue;
+  spring: SpringOptions;
+  magnification: number;
+  distance: number;
+};
+
+type DockProviderProps = {
+  children: React.ReactNode;
+  value: DockContextType;
+};
