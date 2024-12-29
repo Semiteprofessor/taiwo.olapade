@@ -9,7 +9,7 @@ import {
   User,
 } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
   ];
 
   const [scrolling, setScrolling] = useState<Boolean>(false);
-//   const pathname = usePathname();
+  //   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
