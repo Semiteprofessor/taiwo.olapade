@@ -10,7 +10,6 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Chilanka } from "next/font/google";
 import {
   cloneElement,
   createContext,
@@ -37,21 +36,21 @@ type DockProps = {
 
 type DockItemProps = {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
-type DockLabelProos = {
+type DockLabelProps = {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 type DockIconProps = {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
 type DockContextType = {
-  mouseX: MotionValue;
+  mouseX: MotionValue<number>;
   spring: SpringOptions;
   magnification: number;
   distance: number;
@@ -80,8 +79,8 @@ const Dock = ({
   children,
   className,
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
-  magnification: DEFAULT_MAGNIFICATION,
-  distance: DEFAULT_DISTANCE,
+  magnification = DEFAULT_MAGNIFICATION,
+  distance = DEFAULT_DISTANCE,
   panelHeight = DEFAULT_PANEL_HEIGHT,
 }: DockProps) => {
   const mouseX = useMotionValue(Infinity);
@@ -100,7 +99,7 @@ const Dock = ({
         height,
         scrollbarWidth: "none",
       }}
-      className="mx-0 sm:mx-2 flex max-w-full items-end overflow-x-auto"
+      className={cn("mx-0 sm:mx-2 flex max-w-full items-end overflow-x-auto")}
     >
       <motion.div
         onMouseMove={({ pageX }) => {
@@ -112,7 +111,7 @@ const Dock = ({
           mouseX.set(Infinity);
         }}
         className={cn(
-          "mx-auto  flex w-fit gap-1.5 sm:gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900",
+          "mx-auto flex w-fit gap-1.5 sm:gap-4 rounded-2xl bg-gray-50 px-4 dark:bg-neutral-900",
           className
         )}
         style={{ height: panelHeight }}
@@ -127,12 +126,9 @@ const Dock = ({
   );
 };
 
-const DockItem = ({ children, className }) => {
+const DockItem = ({ children, className }: DockItemProps) => {
   const ref = useRef<HTMLDivElement>(null);
-
   const { distance, magnification, mouseX, spring } = useDock();
-
-  const isHovered = useMotionValue(0);
 
   const mouseDistance = useTransform(mouseX, (val) => {
     const domRect = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
@@ -151,10 +147,6 @@ const DockItem = ({ children, className }) => {
     <motion.div
       ref={ref}
       style={{ width }}
-      onHoverStart={() => isHovered.set(1)}
-      onHoverEnd={() => isHovered.set(0)}
-      onFocus={() => isHovered.set(1)}
-      onBlur={() => isHovered.set(0)}
       className={cn(
         "relative inline-flex items-center justify-center",
         className
@@ -163,16 +155,13 @@ const DockItem = ({ children, className }) => {
       role="button"
       aria-haspopup="true"
     >
-      {children.map(children, (child) =>
-        cloneElement(child as React.ReactElement, { width: isHovered })
-      )}
+      {cloneElement(children as React.ReactElement, { width })}
     </motion.div>
   );
 };
 
-const DockLabel = ({ children, className, ...rest }) => {
-  const restProps = rest as Record<string, unknown>;
-  const isHovered = restProps["isHovered"] as MotionValue<number>;
+const DockLabel = ({ children, className }: DockLabelProps) => {
+  const isHovered = useMotionValue(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -205,12 +194,7 @@ const DockLabel = ({ children, className, ...rest }) => {
   );
 };
 
-const DockIcon = ({ children, className, ...rest }) => {
-  const restProps = rest as Record<string, unknown>;
-  const width = restProps["width"] as MotionValue<number>;
-
-  const withTransform = useTransform(width, (val) => val / 2);
-
+const DockIcon = ({ children, className }: DockIconProps) => {
   return (
     <motion.div className={cn("flex items-center justify-center", className)}>
       {children}

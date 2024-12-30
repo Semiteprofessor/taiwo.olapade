@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Briefcase,
   FolderGit2,
@@ -9,8 +10,10 @@ import {
   User,
 } from "lucide-react";
 import Link from "next/link";
-// import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Dock, DockIcon, DockItem, DockLabel } from "./animation/DockAnimation";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const navLinks = [
@@ -47,8 +50,8 @@ const Navbar = () => {
     },
   ];
 
-  const [scrolling, setScrolling] = useState<Boolean>(false);
-  //   const pathname = usePathname();
+  const [scrolling, setScrolling] = useState(false); // Remove the unnecessary type annotation.
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,20 +61,32 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <div
-      className={`fixed top-5 right-0 left-0 px-0 sm:px-5 m-auto w-full sm:w-fit bg-transparent z-[+9999999] ${
+      className={`fixed top-5 right-0 left-0 px-0 sm:px-5 m-auto w-full sm:w-fit bg-transparent z-[9999] ${
         scrolling ? "hidden" : "block"
       }`}
     >
-      <div className="items-end pb-3 rounded-full">
-        {navLinks.map(({ title, icon, href }) => (
-          <Link href={href} key={title} passHref>
-            {icon}
-            {title}
+      <Dock className="items-end pb-3 rounded-full">
+        {navLinks.map((item, idx) => (
+          <Link href={item.href} key={idx}>
+            <DockItem
+              className={cn(
+                "aspect-square rounded-full bg-gray-200 dark:bg-neutral-800",
+                pathname === item.href && "bg-gray-100 border border-primary"
+              )}
+            >
+              <DockLabel className={cn("")}>{item.title}</DockLabel>
+              <DockIcon
+                className={cn(pathname === item.href && "text-[#2f7df4]")}
+              >
+                {item.icon}
+              </DockIcon>
+            </DockItem>
           </Link>
         ))}
-      </div>
+      </Dock>
     </div>
   );
 };
