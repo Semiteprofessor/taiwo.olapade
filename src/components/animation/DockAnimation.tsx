@@ -170,7 +170,7 @@ const DockItem = ({ children, className }) => {
   );
 };
 
-const DockLabel = ({ children, clasName, ...rest }) => {
+const DockLabel = ({ children, className, ...rest }) => {
   const restProps = rest as Record<string, unknown>;
   const isHovered = restProps["isHovered"] as MotionValue<number>;
   const [isVisible, setIsVisible] = useState(false);
@@ -191,9 +191,31 @@ const DockLabel = ({ children, clasName, ...rest }) => {
           animate={{ opacity: 1, y: -10 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.2 }}
-          className={cn("absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white", className)}
-           role="tooltip" style={{x: }}></motion.div>
-      
+          className={cn(
+            "absolute -top-6 left-1/2 w-fit whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white",
+            className
+          )}
+          role="tooltip"
+          style={{ x: "-50%" }}
+        >
+          {children}
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 };
+
+const DockIcon = ({ children, className, ...rest }) => {
+  const restProps = rest as Record<string, unknown>;
+  const width = restProps["width"] as MotionValue<number>;
+
+  const withTransform = useTransform(width, (val) => val / 2);
+
+  return (
+    <motion.div className={cn("flex items-center justify-center", className)}>
+      {children}
+    </motion.div>
+  );
+};
+
+export { Dock, DockIcon, DockItem, DockLabel };
