@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HackerBtn = ({ label }: { label: string }) => {
   const [displaText, setDisplayText] = useState(label);
@@ -22,8 +22,17 @@ const HackerBtn = ({ label }: { label: string }) => {
     }
   };
 
-  const startScrambling = () => {};
-  return <div></div>;
+  const startScrambling = () => {
+    scramble(label);
+    setTimeout(() => console.log("Submitted"), label.length * 50);
+  };
+
+  useEffect(() => {
+    setDisplayText(label);
+  }, [label]);
+
+
+  return <Button></Button>;
 };
 
 export default HackerBtn;
