@@ -5,5 +5,8 @@ export const siteConfig = {
   url: "http://taiwoolapade.vercel.app",
 };
 export default function Home() {
-  return <div>Hello !!!</div>;
+  return <>
+  {/* LEFT SIDE */}
+  <
+  </>;
 }

@@ -50,7 +50,7 @@ const Navbar = () => {
     },
   ];
 
-  const [scrolling, setScrolling] = useState(false); // Remove the unnecessary type annotation.
+  const [scrolling, setScrolling] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -77,7 +77,9 @@ const Navbar = () => {
                 pathname === item.href && "bg-gray-100 border border-primary"
               )}
             >
-              <DockLabel className={cn("")}>{item.title}</DockLabel>
+              {/* <DockLabel className={cn("text-2xl")}>
+                {item?.title ?? "Default Title"}
+              </DockLabel> */}
               <DockIcon
                 className={cn(pathname === item.href && "text-[#2f7df4]")}
               >

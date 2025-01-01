@@ -159,7 +159,6 @@ const DockItem = ({ children, className }: DockItemProps) => {
     </motion.div>
   );
 };
-
 const DockLabel = ({ children, className }: DockLabelProps) => {
   const isHovered = useMotionValue(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -193,7 +192,6 @@ const DockLabel = ({ children, className }: DockLabelProps) => {
     </AnimatePresence>
   );
 };
-
 const DockIcon = ({ children, className }: DockIconProps) => {
   return (
     <motion.div className={cn("flex items-center justify-center", className)}>
