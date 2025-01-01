@@ -1,3 +1,5 @@
+import FramerWrapper from "@/components/animation/FramerWrapper";
+
 export const siteConfig = {
   name: "Taiwo Olapade",
   description: "I am a passionate Software Developer.",
@@ -5,8 +7,16 @@ export const siteConfig = {
   url: "http://taiwoolapade.vercel.app",
 };
 export default function Home() {
-  return <>
-  {/* LEFT SIDE */}
-  <
-  </>;
+  return (
+    <>
+      {/* LEFT SIDE */}
+      <FramerWrapper
+        className="h-full w-auto flex flex-col justify-start gap-4"
+        y={0}
+        x={-100}
+      >
+        <HeroTexts />
+      </FramerWrapper>
+    </>
+  );
 }
