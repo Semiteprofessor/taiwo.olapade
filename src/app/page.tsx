@@ -1,4 +1,5 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
+import HeroTexts from "@/components/ui/HeroTexts";
 
 export const siteConfig = {
   name: "Taiwo Olapade",
@@ -16,6 +17,9 @@ export default function Home() {
         x={-100}
       >
         <HeroTexts />
+        <div className="h-fit w-full p-4 flex gap-4">
+          <SocialLinks />
+        </div>
       </FramerWrapper>
     </>
   );
