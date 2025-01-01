@@ -1,4 +1,5 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
+import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/ui/HeroTexts";
 
 export const siteConfig = {
@@ -20,6 +21,7 @@ export default function Home() {
         <div className="h-fit w-full p-4 flex gap-4">
           <SocialLinks />
         </div>
+        <DownloadResumeBtn />
       </FramerWrapper>
     </>
   );
