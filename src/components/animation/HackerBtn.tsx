@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "../ui/Button";
+import { Download } from "lucide-react";
 
 const HackerBtn = ({ label }: { label: string }) => {
   const [displaText, setDisplayText] = useState(label);
@@ -31,8 +33,15 @@ const HackerBtn = ({ label }: { label: string }) => {
     setDisplayText(label);
   }, [label]);
 
-
-  return <Button></Button>;
+  return (
+    <Button
+      size={"lg"}
+      className="text-base px-5 py-6"
+      onMouseEnter={startScrambling}
+    >
+      <Download className="mx-1">{displaText}</Download>
+    </Button>
+  );
 };
 
 export default HackerBtn;
