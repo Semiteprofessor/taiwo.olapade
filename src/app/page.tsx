@@ -27,7 +27,7 @@ export default function Home() {
         <DownloadResumeBtn />
       </FramerWrapper>
       <FramerWrapper
-        className="h-full w-[47%] relative block max-lg:hidden"
+        className="h-full w-full relative block max-lg:hidden"
         y={0}
         x={100}
       >

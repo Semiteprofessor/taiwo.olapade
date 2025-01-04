@@ -11,7 +11,7 @@ const HeroImage = () => {
         loading="eager"
         priority
         height={1000}
-        width={10000}
+        width={1000}
       />
     </>
   );

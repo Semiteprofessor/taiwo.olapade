@@ -39,7 +39,7 @@ const HackerBtn = ({ label }: { label: string }) => {
       className="text-base px-5 py-6"
       onMouseEnter={startScrambling}
     >
-      <Download className="mx-1">{displayText}</Download>
+      <Download className="mx-1" />{displayText}
     </Button>
   );
 };

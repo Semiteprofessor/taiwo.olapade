@@ -13,6 +13,14 @@ const TextRotator = () => {
             <li className="text-[#194586]">Instructor</li>
           </ul>
         </span>
+        <br />
+        <br />
+        <p className="md:text-xl w-[80%] text-justify">
+          I’m a resourceful full-stack JavaScript developer skilled in building
+          scalable web applications. Proficient in React, Node.js, and
+          databases, I deliver user-centric solutions with a passion for clean,
+          efficient code.
+        </p>
       </div>
     </div>
   );
