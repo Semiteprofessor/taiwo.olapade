@@ -1,5 +1,6 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
 import SocialLinks from "@/components/SocialLinks";
+import DownloadResumeBtn from "@/components/ui/DownloadResumeBtn";
 import HeroTexts from "@/components/ui/HeroTexts";
 
 export const siteConfig = {

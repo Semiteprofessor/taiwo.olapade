@@ -5,7 +5,7 @@ import { Button } from "../ui/Button";
 import { Download } from "lucide-react";
 
 const HackerBtn = ({ label }: { label: string }) => {
-  const [displaText, setDisplayText] = useState(label);
+  const [displayText, setDisplayText] = useState(label);
   const charset = "abcdefghijklmnopqrstuvwxyz";
 
   const randomChars = (length: number) => {
@@ -39,7 +39,7 @@ const HackerBtn = ({ label }: { label: string }) => {
       className="text-base px-5 py-6"
       onMouseEnter={startScrambling}
     >
-      <Download className="mx-1">{displaText}</Download>
+      <Download className="mx-1">{displayText}</Download>
     </Button>
   );
 };
