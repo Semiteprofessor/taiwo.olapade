@@ -1,7 +1,8 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
 import SocialLinks from "@/components/SocialLinks";
-import DownloadResumeBtn from "@/components/ui/DownloadResumeBtn";
 import HeroTexts from "@/components/HeroTexts";
+import HeroImage from "@/components/HeroImage";
+import DownloadResumeBtn from "@/components/DownloadResumeBtn";
 
 export const siteConfig = {
   name: "Taiwo Olapade",
@@ -24,6 +25,15 @@ export default function Home() {
         </div>
         <DownloadResumeBtn />
       </FramerWrapper>
+      <FramerWrapper
+        className="h-full w-[47%] relative block max-lg:hidden"
+        y={0}
+        x={100}
+      >
+        <HeroImage />
+      </FramerWrapper>
+
+      <GithubBtn />
     </>
   );
 }
