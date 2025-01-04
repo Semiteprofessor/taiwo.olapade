@@ -1,5 +1,15 @@
+import Link from "next/link";
 import FramerWrapper from "./animation/FramerWrapper";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/Button";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   value: any;
@@ -41,6 +51,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ value, num }) => {
             })}
           </div>
         </CardContent>
+        <CardFooter className="items-center justify-center flex">
+          <Link
+            href={value.link}
+            target="blank"
+            className={cn(
+              buttonVariants({ variant: "default:", size: "lg" }),
+              "flex"
+            )}
+          >
+            Visit Project <ArrowUpRight className="h-5 w-5 ml-1" />
+          </Link>
+        </CardFooter>
       </Card>
     </FramerWrapper>
   );
