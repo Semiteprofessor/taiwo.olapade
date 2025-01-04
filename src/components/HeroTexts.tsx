@@ -1,4 +1,4 @@
-import TextRotator from "./TextRotator";
+import TextRotator from "./ui/TextRotator";
 
 const HeroTexts = () => {
   return (

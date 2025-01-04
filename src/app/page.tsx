@@ -1,7 +1,7 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
 import SocialLinks from "@/components/SocialLinks";
 import DownloadResumeBtn from "@/components/ui/DownloadResumeBtn";
-import HeroTexts from "@/components/ui/HeroTexts";
+import HeroTexts from "@/components/HeroTexts";
 
 export const siteConfig = {
   name: "Taiwo Olapade",

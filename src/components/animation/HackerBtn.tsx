@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "../ui/Button";
+import { Button } from "../ui/button";
 import { Download } from "lucide-react";
 
 const HackerBtn = ({ label }: { label: string }) => {
