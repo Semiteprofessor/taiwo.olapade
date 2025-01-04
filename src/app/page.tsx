@@ -3,6 +3,7 @@ import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/HeroTexts";
 import HeroImage from "@/components/HeroImage";
 import DownloadResumeBtn from "@/components/DownloadResumeBtn";
+import GithubBtn from "@/components/animation/GithubBtn";
 
 export const siteConfig = {
   name: "Taiwo Olapade",
