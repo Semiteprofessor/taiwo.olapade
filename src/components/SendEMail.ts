@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { redirect } from "next/navigation";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-export const senEmail = async (formData: FormData) => {
+const SenEmail = async (formData: FormData) => {
   const message = formData.get("message");
   const name = formData.get("name");
   const sendEmail = formData.get("SendEmail");
@@ -22,3 +22,5 @@ export const senEmail = async (formData: FormData) => {
   });
   return redirect("/");
 };
+
+export default SenEmail;
