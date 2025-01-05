@@ -15,7 +15,7 @@ import nextjs from "../../../public/nextjs.jpeg";
 import python from "../../../public/python.webp";
 import tailwind from "../../../public/tailwindcss.png";
 import github from "../../../public/github.png";
-import vscode from "../../../public/vscode.png";
+import erpnext from "../../../public/erpnext.png";
 const Skill = () => {
   const language = [
     { alt: "html", img: html },
@@ -40,18 +40,17 @@ const Skill = () => {
     { alt: "scss", img: scss },
     { alt: "tailwind", img: tailwind },
     { alt: "github", img: github },
-    { alt: "vscode", img: vscode },
   ];
 
   const devOps = [
-    { alt: "github", img: github },
-    { alt: "circleci", img: circleci },
-    { alt: "docker", img: docker },
-    { alt: "kubernetes", img: kubernetes },
-    { alt: "aws", img: aws },
-    { alt: "azure", img: azure },
-    { alt: "google", img: google },
-    { alt: "digitalocean", img: digitalocean },
+    // { alt: "github", img: github },
+    // { alt: "circleci", img: circleci },
+    // { alt: "docker", img: docker },
+    // { alt: "kubernetes", img: kubernetes },
+    // { alt: "aws", img: aws },
+    // { alt: "azure", img: azure },
+    // { alt: "google", img: google },
+    // { alt: "digitalocean", img: digitalocean },
   ];
   return (
     <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">

@@ -28,7 +28,7 @@ const ContactForm = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
+          <div className="grid w-full max-w-sm items-center gap-1.5 mt-8">
             <Label htmlFor="name">Name</Label>
             <Input
               type="text"
@@ -37,7 +37,7 @@ const ContactForm = () => {
               placeholder="Enter your name"
             />
           </div>
-          <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
+          <div className="grid w-full max-w-sm items-center gap-1.5 mt-8">
             <Label htmlFor="email">Email</Label>
             <Input
               type="email"
@@ -46,7 +46,7 @@ const ContactForm = () => {
               placeholder="Enter your email"
             />
           </div>
-          <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
+          <div className="grid w-full max-w-sm items-center gap-1.5 mt-8">
             <Label htmlFor="message">Your Message</Label>
             <textarea
               placeholder="Your message here..."
@@ -57,7 +57,7 @@ const ContactForm = () => {
           </div>
         </CardContent>
         <CardFooter>
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full mt-4">
             Submit
           </Button>
         </CardFooter>
