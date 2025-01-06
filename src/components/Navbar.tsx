@@ -68,7 +68,7 @@ const Navbar = () => {
         scrolling ? "hidden" : "block"
       }`}
     >
-      <Dock className="items-end pb-3 rounded-full">
+      <Dock className="items-end pb-3 rounded-full border border-gray-400">
         {navLinks.map((item, idx) => (
           <Link href={item.href} key={idx}>
             <DockItem
