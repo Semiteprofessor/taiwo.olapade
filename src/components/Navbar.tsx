@@ -28,11 +28,11 @@ const Navbar = () => {
       icon: <Briefcase className="w-full h-full" />,
       href: "/skills",
     },
-    {
-      title: "Education",
-      icon: <GraduationCap className="w-full h-full" />,
-      href: "/education",
-    },
+    // {
+    //   title: "Education",
+    //   icon: <GraduationCap className="w-full h-full" />,
+    //   href: "/education",
+    // },
     {
       title: "Projects",
       icon: <FolderGit2 className="w-full h-full" />,
