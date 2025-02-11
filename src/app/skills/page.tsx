@@ -174,7 +174,7 @@ const Skill = () => {
           </p>
         </FramerWrapper>
         <br />
-        <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+        {/* <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
           <motion.svg
             initial={{ opacity: 0.2, y: 0 }}
             animate={{ opacity: 1, y: "10px" }}
@@ -193,7 +193,7 @@ const Skill = () => {
             <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
             <path d="M15 11L12 14L9 11" stroke="#000000" strokeWidth="1"></path>
           </motion.svg>
-        </div>
+        </div> */}
         <FramerWrapper y={100} delay={0.3} className="block">
           <h1 className="gap-2 text-2xl font-poppins text-primary font-semibold flex text_underline relative max-sm:text-xl">
             Programming Languages

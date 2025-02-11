@@ -1,25 +1,30 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import FramerWrapper from "./animation/FramerWrapper";
+import { buttonVariants } from "./ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/Button";
+} from "@/components/ui/card";
+import FramerWrapper from "./animation/FramerWrapper";
 import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
-  value: any;
+  value: {
+    title: string;
+    description: string;
+    tags: string[];
+    link: string;
+  };
   num: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ value, num }) => {
+const ProjectCards: React.FC<ProjectCardProps> = ({ value, num }) => {
   return (
     <FramerWrapper
-      className={"max-w-[32%] min-h-[345px] max-lg:max-w-full"}
+      className="max-w-[32%] min-h-[345px] max-lg:max-w-full"
       y={0}
       scale={0.8}
       delay={num / 4}
@@ -32,31 +37,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ value, num }) => {
         <CardContent>
           <p className="text-base font-poppins">{value.description}</p>
           <div className="w-full h-fit flex mt-2 justify-center flex-row gap-3">
-            {value.tags.map((itm: string, idx: string) => {
-              return (
-                <span
-                  className={`inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium ${
-                    (itm === "Nextjs" && "bg-teal-100 text-teal-800") ||
-                    (itm === "Freelancing" &&
-                      "bg-yellow-100 text-yellow-800 ") ||
-                    (itm === "Shadcn Ui" && "bg-blue-100 text-blue-800") ||
-                    (itm === "Typescript" && "bg-red-100 text-red-800") ||
-                    "bg-gray-100 text-gray-800"
-                  }  `}
-                  key={idx}
-                >
-                  {itm}
-                </span>
-              );
-            })}
+            {value.tags.map((tag, index) => (
+              <span
+                key={tag + index}
+                className={cn(
+                  "inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium",
+                  tag === "Nextjs" && "bg-teal-100 text-teal-800",
+                  tag === "Freelancing" && "bg-yellow-100 text-yellow-800",
+                  tag === "Shadcn Ui" && "bg-blue-100 text-blue-800",
+                  tag === "Typescript" && "bg-red-100 text-red-800",
+                  ![
+                    "Nextjs",
+                    "Freelancing",
+                    "Shadcn Ui",
+                    "Typescript",
+                  ].includes(tag) && "bg-gray-100 text-gray-800"
+                )}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </CardContent>
         <CardFooter className="items-center justify-center flex">
           <Link
             href={value.link}
-            target="blank"
+            target="_blank"
             className={cn(
-              buttonVariants({ variant: "default:", size: "lg" }),
+              buttonVariants({ variant: "default", size: "lg" }),
               "flex"
             )}
           >
@@ -67,3 +75,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ value, num }) => {
     </FramerWrapper>
   );
 };
+
+export default ProjectCards;

@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "./ui/button";
+import { Button } from "./ui/Button";
 import { SendEmail } from "./SendEMail";
 
 const ContactForm = () => {
