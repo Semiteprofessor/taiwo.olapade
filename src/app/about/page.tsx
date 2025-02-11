@@ -5,20 +5,19 @@ import Heading from "@/components/Heading";
 import { Badge } from "@/components/ui/badge";
 import { Circle, Heart, User2 } from "lucide-react";
 import React, { useRef } from "react";
-import { motion, useInView, useScroll } from "framer-motion";
-import AboutFooter from "@/components/AboutFooter";
+import { motion } from "framer-motion";
 
 const About = () => {
-  const containerRef = useRef();
+  const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  // const { scrollYProgress } = useScroll({ container: containerRef });
 
-  const skillRef = useRef();
-  // const isSkillRefInView = useInView(skillRef, {once:true});
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  // const skillRef = useRef();
+  // // const isSkillRefInView = useInView(skillRef, {once:true});
+  // const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const experienceRef = useRef(null);
+  // const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
   const items = [
     { hobby: "Coding" },
     { hobby: "Teaching" },
@@ -94,7 +93,7 @@ const About = () => {
         </motion.svg>
       </div>
       {/* SKILLS CONTAINER */}
-      
+
       {/* EXPERIENCE CONTAINER */}
       <div
         className="flex flex-col gap-12 justify-center pb-48"
