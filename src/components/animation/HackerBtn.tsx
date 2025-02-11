@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Download } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Button } from "../ui/button";
 
 const HackerBtn = ({ label }: { label: string }) => {
   const [displayText, setDisplayText] = useState(label);
@@ -39,7 +39,8 @@ const HackerBtn = ({ label }: { label: string }) => {
       className="text-base px-5 py-6"
       onMouseEnter={startScrambling}
     >
-      <Download className="mx-1" />{displayText}
+      <Download className="mx-1" />
+      {displayText}
     </Button>
   );
 };
