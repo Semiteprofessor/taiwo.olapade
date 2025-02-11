@@ -5,19 +5,17 @@ import Heading from "@/components/Heading";
 import SkillsFooter from "@/components/SkillsFooter";
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb } from "lucide-react";
-import React, { useRef } from "react";
-import { motion, useInView, useScroll } from "framer-motion";
 const Skill = () => {
-  const containerRef = useRef();
+  // const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  // const { scrollYProgress } = useScroll({ container: containerRef });
 
-  const skillRef = useRef();
+  // const skillRef = useRef(null);
   // const isSkillRefInView = useInView(skillRef, {once:true});
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  // const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
-  const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  // const experienceRef = useRef(null);
+  // const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
   const language = [
     {
       alt: "html",
