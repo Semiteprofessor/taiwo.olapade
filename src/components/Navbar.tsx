@@ -3,7 +3,6 @@
 import {
   Briefcase,
   FolderGit2,
-  GraduationCap,
   HomeIcon,
   Mail,
   MoreHorizontal,
@@ -12,7 +11,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Dock, DockIcon, DockItem, DockLabel } from "./animation/DockAnimation";
+import { Dock, DockIcon, DockItem } from "./animation/DockAnimation";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {

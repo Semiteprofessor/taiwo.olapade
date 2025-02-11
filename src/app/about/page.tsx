@@ -53,7 +53,7 @@ const About = () => {
         </FramerWrapper>
         {/* BIOGRAPHY QUOTE */}
         <span className="italic">
-          "Building dreams with code, passion, and purpose."
+          Building dreams with code, passion, and purpose.
         </span>
         {/* BIOGRAPHY SIGN SVG*/}
         <div className="self-end">

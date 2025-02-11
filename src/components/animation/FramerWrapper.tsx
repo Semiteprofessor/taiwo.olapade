@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 type FramerMotionProps = {
@@ -22,11 +22,6 @@ const FramerWrapper = ({
   scale = 0,
   className,
 }: FramerMotionProps) => {
-  const { animateConfig, setAnimateConfig } = useState({
-    opacity: 1,
-    y: 0,
-    x: 0,
-  });
   return (
     <AnimatePresence>
       <motion.div
