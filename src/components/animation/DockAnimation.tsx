@@ -10,7 +10,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import {
+import React, {
   cloneElement,
   createContext,
   useContext,
@@ -142,7 +142,6 @@ const DockItem = ({ children, className }: DockItemProps) => {
   );
 
   const width = useSpring(withTransform, spring);
-
   return (
     <motion.div
       ref={ref}
@@ -155,10 +154,13 @@ const DockItem = ({ children, className }: DockItemProps) => {
       role="button"
       aria-haspopup="true"
     >
-      {cloneElement(children as React.ReactElement, { width })}
+      {React.isValidElement(children)
+        ? cloneElement(children, { style: { width } })
+        : children}
     </motion.div>
   );
 };
+
 const DockLabel = ({ children, className }: DockLabelProps) => {
   const isHovered = useMotionValue(0);
   const [isVisible, setIsVisible] = useState(false);

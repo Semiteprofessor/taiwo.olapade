@@ -1,9 +1,11 @@
 import FramerWrapper from "@/components/animation/FramerWrapper";
 import SocialLinks from "@/components/SocialLinks";
 import HeroTexts from "@/components/HeroTexts";
-import HeroImage from "@/components/HeroImage";
+// import HeroImage from "@/components/HeroImage";
 import DownloadResumeBtn from "@/components/DownloadResumeBtn";
 import GithubBtn from "@/components/animation/GithubBtn";
+import WaveCard from "@/components/WaveCard";
+import logo from "../../public/Mine.jpg";
 
 export const siteConfig = {
   name: "Taiwo Olapade",
@@ -27,11 +29,15 @@ export default function Home() {
         <DownloadResumeBtn />
       </FramerWrapper>
       <FramerWrapper
-        className="h-full w-full relative block max-lg:hidden"
+        className="h-full w-full mt-32 relative block max-lg:hidden"
         y={0}
         x={100}
       >
-        <HeroImage />
+        <WaveCard
+          imgSrc="https://i.postimg.cc/dt6GnHYD/Mine.jpg"
+          caption="Full Stack Developer"
+          
+        />
       </FramerWrapper>
 
       <GithubBtn />

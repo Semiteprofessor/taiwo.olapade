@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ["@react-email/render"],
   },
@@ -12,6 +11,7 @@ const nextConfig: NextConfig = {
       "static-00.iconduck.com",
       "cdn.prod.website-files.com",
       "www.okoone.com",
+      "i.postimg.cc",
     ],
   },
 };
