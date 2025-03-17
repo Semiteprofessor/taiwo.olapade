@@ -155,8 +155,8 @@ const DockItem = ({ children, className }: DockItemProps) => {
       aria-haspopup="true"
     >
       {React.isValidElement(children)
-        ? cloneElement(children, {
-            style: { ...(children.props.style || {}), width },
+        ? cloneElement(children as React.ReactElement<any>, {
+            style: { ...(children.props?.style || {}), width },
           })
         : children}
     </motion.div>
