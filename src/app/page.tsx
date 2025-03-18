@@ -5,7 +5,6 @@ import HeroTexts from "@/components/HeroTexts";
 import DownloadResumeBtn from "@/components/DownloadResumeBtn";
 import GithubBtn from "@/components/animation/GithubBtn";
 import WaveCard from "@/components/WaveCard";
-import logo from "../../public/Mine.jpg";
 
 export const siteConfig = {
   name: "Taiwo Olapade",
@@ -36,7 +35,6 @@ export default function Home() {
         <WaveCard
           imgSrc="https://i.postimg.cc/dt6GnHYD/Mine.jpg"
           caption="Full Stack Developer"
-          
         />
       </FramerWrapper>
 
