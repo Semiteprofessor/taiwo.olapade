@@ -18,7 +18,7 @@ const WaveCard = ({ imgSrc, caption }: { imgSrc: string; caption: string }) => {
         src={imgSrc}
         alt={caption}
         width={800}
-        height={850}
+        height={1000}
         className="block border-[5px] border-gray-100 w-[2000px] h-[650px]"
       />
 
