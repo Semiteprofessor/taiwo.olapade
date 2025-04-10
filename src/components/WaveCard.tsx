@@ -19,7 +19,7 @@ const WaveCard = ({ imgSrc, caption }: { imgSrc: string; caption: string }) => {
         alt={caption}
         width={800}
         height={1000}
-        className="block border-[5px] border-gray-100 w-[2000px] h-[650px]"
+        className="block border-[5px] border-gray-100 w-[2000px] h-[750px]"
       />
 
       <figcaption className="text-center">{caption}</figcaption>
