@@ -100,6 +100,14 @@ const Skill = () => {
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg",
     },
     {
+      alt: "minikube",
+      img: "https://www.svgrepo.com/show/373296/minikube.svg",
+    },
+    {
+      alt: "eks",
+      img: "https://cdn.prod.website-files.com/5f05d5858fab461d0d08eaeb/634ff70e43a9f038e0092fc8_eks_light.svg",
+    },
+    {
       alt: "aws",
       img: "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
     },
@@ -118,6 +126,26 @@ const Skill = () => {
     {
       alt: "nginx",
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+    },
+    {
+      alt: "rabbitmq",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg",
+    },
+    {
+      alt: "elasticsearch",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg",
+    },
+    {
+      alt: "kibana",
+      img: "https://www.svgrepo.com/show/353961/kibana.svg",
+    },
+    {
+      alt: "prometheus",
+      img: "https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg",
+    },
+    {
+      alt: "grafana",
+      img: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg",
     },
   ];
 
