@@ -8,37 +8,33 @@ const Project = () => {
   // PROJECTS DATA
   const Projects = [
     {
-      title: "Devzone - A community chat app for devs",
+      title: "Access Insurance",
       image: "/images/devzone.png",
-      description: `DevZone is the ultimate chat platform for developers
-to connect, collaborate, and code together. Join the conversation and level up your coding journey.`,
-      tags: ["Zustand", "Supabase", "Shadcn Ui", "Nextjs"],
+      description: `An Insurance Brokerage App by Access Bank.`,
+      tags: ["Redux", "Nextjs"],
       link: "https://www.accessbankplc.com/bancassurance",
     },
-
     {
-      title: "itZmyLink- One Page many Links",
+      title: "3XG Africa",
       image: "/images/devzone.png",
       description:
-        "itZmyLink is a simple platform where user can create a personalized page to showcase all your social media profiles in one place. ",
-      tags: ["Nextjs", "Typescript", "Shadcn Ui"],
-      link: "https://3xg.africa",
+        "3XG Technologies is an innovative technology company that specializes in providing comprehensive IT solutions for businesses of all sizes",
+      tags: ["React.js", "Typescript", "Ant Design"],
+      link: "https:/3xg.africa/",
     },
     {
-      title: "GitEstimate- Github estimate worth generator",
+      title: "3XG Merchant Hub",
       image: "/images/devzone.png",
-      description:
-        "GitEstimate is a simple fun tool where user can generate their github estimate worth card just by entering their github username. ",
-      tags: ["Nextjs", "Typescript", "Shadcn Ui"],
-      link: "https://github.com/taqui-786/GitEstimate",
+      description: "An e-Commerce Marketplace for seller",
+      tags: ["React.js", "Typescript", "Ant Design"],
+      link: "https://staging-merchant.3xg.africa/",
     },
     {
-      title: "Mixcn-ui- Reusable components for Nextjs",
+      title: "3XG Shopper",
       image: "/images/devzone.png",
-      description:
-        "This is Nextjs app with a Collection of Nextjs Components - (Currently under Devlelopment) ",
-      tags: ["Nextjs", "Shadcnui", "Npx", "Library"],
-      link: "https://mixcn-ui.vercel.app",
+      description: "An e-Commerce Marketplace",
+      tags: ["Next.js", "Typescript", "Chakra UI"],
+      link: "https://staging-shop.3xg.africa/",
     },
     {
       title: "Rupeespot- All deals Product in one place",
