@@ -33,7 +33,7 @@ const Project = () => {
       title: "3XG Shopper",
       image: "/images/devzone.png",
       description: "An e-Commerce Marketplace",
-      tags: ["Next.js", "Typescript", "Chakra UI"],
+      tags: ["Next.js", "Typescript", "Chakra UI", "Redux", "Nest.js"],
       link: "https://staging-shop.3xg.africa/",
     },
     {
