@@ -30,7 +30,7 @@ const ProjectCards: React.FC<ProjectCardProps> = ({ value, num }) => {
       delay={num / 4}
       duration={0.15}
     >
-      <Card className="w-full h-full">
+      <Card className="w-[300px] h-full">
         <CardHeader>
           <CardTitle>{value.title}</CardTitle>
         </CardHeader>
