@@ -40,15 +40,8 @@ const Project = () => {
       title: "Jobber",
       image: "/images/devzone.png",
       description: "A freelancer job Marketplace",
-      tags: [
-        "Node.js",
-        "Microservices",
-        "Elasticsearch",
-        "RabbitMq",
-        "React.js",
-        "Redux",
-      ],
-      link: "https://staging-shop.3xg.africa/",
+      tags: ["Node.js", "Microservices", "Elasticsearch", "RabbitMq", "React"],
+      link: "https://jobberrr.vercel.app/",
     },
   ];
 
