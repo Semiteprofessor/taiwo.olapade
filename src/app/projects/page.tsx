@@ -73,7 +73,7 @@ const Project = () => {
         </FramerWrapper>
       </div>
 
-      <div className="w-full flex flex-row flex-wrap align-middle gap-3 max-lg:flex-col">
+      <div className="w-full flex flex-row flex-wrap items-center justify-around gap-3 max-lg:flex-col">
         {Projects.map((val, indx) => {
           return <ProjectCards key={indx} value={val} num={indx} />;
         })}
