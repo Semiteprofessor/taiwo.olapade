@@ -36,6 +36,21 @@ const Project = () => {
       tags: ["Next.js", "Typescript", "Chakra UI"],
       link: "https://staging-shop.3xg.africa/",
     },
+    {
+      title: "Jobber",
+      image: "/images/devzone.png",
+      description: "A freelancer job Marketplace",
+      tags: [
+        "Node.js",
+        "Microservices",
+        "Elasticsearch",
+        "RabbitMq",
+        "React.js",
+        "Typescript",
+        "Redux",
+      ],
+      link: "https://staging-shop.3xg.africa/",
+    },
   ];
 
   return (
@@ -58,7 +73,7 @@ const Project = () => {
         </FramerWrapper>
       </div>
 
-      <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
+      <div className="w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
         {Projects.map((val, indx) => {
           return <ProjectCards key={indx} value={val} num={indx} />;
         })}
