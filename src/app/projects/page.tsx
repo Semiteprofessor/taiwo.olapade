@@ -1,3 +1,5 @@
+"use client";
+
 import FramerWrapper from "@/components/animation/FramerWrapper";
 import Heading from "@/components/Heading";
 import ProjectCards from "@/components/ProjectsCard";
@@ -6,7 +8,6 @@ import { projects } from "@/lib/utils/constants";
 import { Layers } from "lucide-react";
 
 const Project = () => {
-
   return (
     <div
       className="h-full w-full relative flex flex-col items-start gap-5 overflow-y-auto pr-2 hide-scrollbar"
