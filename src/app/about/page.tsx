@@ -43,8 +43,8 @@ const About = () => {
       {/* Intro & Bio */}
       <div className="flex flex-col gap-3 w-full">
         <Heading>
-          Software Engineer & Web <br className="hidden sm:block" /> Developer,
-          Based in Nigeria
+          Software Engineer &amp; Web <br className="hidden sm:block" />{" "}
+          Developer, Based in Nigeria
         </Heading>
 
         <FramerWrapper>
@@ -60,12 +60,11 @@ const About = () => {
 
         {/* Quote */}
         <span className="italic text-primary text-sm sm:text-base">
-          "Building dreams with code, passion, and purpose."
+          &quot;Building dreams with code, passion, and purpose.&quot;
         </span>
 
         {/* Signature */}
         <div className="self-center sm:self-end">
-          {/* SVG kept same */}
           <svg
             width="160"
             height="80"
@@ -73,7 +72,6 @@ const About = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* signature path */}
             <path
               d="M43 85C47.3733..."
               stroke="black"
