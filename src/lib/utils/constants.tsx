@@ -163,3 +163,42 @@ export const database = [
   // { alt: "google", img: "google" },
   // { alt: "digitalocean", img: digitalocean },
 ];
+
+export const projects = [
+  {
+    title: "Access Insurance",
+    image: "/images/devzone.png",
+    description: `An Insurance Brokerage App by Access Bank.`,
+    tags: ["Redux", "Nextjs"],
+    link: "https://www.accessbankplc.com/bancassurance",
+  },
+  {
+    title: "3XG Africa",
+    image: "/images/devzone.png",
+    description:
+      "3XG Technologies is an innovative technology company that specializes in providing comprehensive IT solutions for businesses of all sizes",
+    tags: ["React.js", "Typescript", "Ant Design"],
+    link: "https:/3xg.africa/",
+  },
+  {
+    title: "3XG Merchant Hub",
+    image: "/images/devzone.png",
+    description: "An e-Commerce Marketplace for seller",
+    tags: ["React.js", "Typescript", "Ant Design"],
+    link: "https://staging-merchant.3xg.africa/",
+  },
+  {
+    title: "3XG Shopper",
+    image: "/images/devzone.png",
+    description: "An e-Commerce Marketplace",
+    tags: ["Next.js", "Typescript", "Chakra UI", "Redux", "Nest.js"],
+    link: "https://staging-shop.3xg.africa/",
+  },
+  {
+    title: "Jobber",
+    image: "/images/devzone.png",
+    description: "A freelancer job Marketplace",
+    tags: ["Node.js", "Microservices", "Elasticsearch", "RabbitMq", "React"],
+    link: "https://jobberrr.vercel.app/",
+  },
+];

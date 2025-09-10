@@ -2,48 +2,10 @@ import FramerWrapper from "@/components/animation/FramerWrapper";
 import Heading from "@/components/Heading";
 import ProjectCards from "@/components/ProjectsCard";
 import { Badge } from "@/components/ui/badge";
+import { projects } from "@/lib/utils/constants";
 import { Layers } from "lucide-react";
 
 const Project = () => {
-  // PROJECTS DATA
-  const Projects = [
-    {
-      title: "Access Insurance",
-      image: "/images/devzone.png",
-      description: `An Insurance Brokerage App by Access Bank.`,
-      tags: ["Redux", "Nextjs"],
-      link: "https://www.accessbankplc.com/bancassurance",
-    },
-    {
-      title: "3XG Africa",
-      image: "/images/devzone.png",
-      description:
-        "3XG Technologies is an innovative technology company that specializes in providing comprehensive IT solutions for businesses of all sizes",
-      tags: ["React.js", "Typescript", "Ant Design"],
-      link: "https:/3xg.africa/",
-    },
-    {
-      title: "3XG Merchant Hub",
-      image: "/images/devzone.png",
-      description: "An e-Commerce Marketplace for seller",
-      tags: ["React.js", "Typescript", "Ant Design"],
-      link: "https://staging-merchant.3xg.africa/",
-    },
-    {
-      title: "3XG Shopper",
-      image: "/images/devzone.png",
-      description: "An e-Commerce Marketplace",
-      tags: ["Next.js", "Typescript", "Chakra UI", "Redux", "Nest.js"],
-      link: "https://staging-shop.3xg.africa/",
-    },
-    {
-      title: "Jobber",
-      image: "/images/devzone.png",
-      description: "A freelancer job Marketplace",
-      tags: ["Node.js", "Microservices", "Elasticsearch", "RabbitMq", "React"],
-      link: "https://jobberrr.vercel.app/",
-    },
-  ];
 
   return (
     // PROJECT PAGE
@@ -66,7 +28,7 @@ const Project = () => {
       </div>
 
       <div className="w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
-        {Projects.map((val, indx) => {
+        {projects.map((val, indx) => {
           return <ProjectCards key={indx} value={val} num={indx} />;
         })}
       </div>
