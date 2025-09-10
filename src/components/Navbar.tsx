@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Dock, DockIcon, DockItem } from "./animation/DockAnimation";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/utils";
 
 const Navbar = () => {
   const navLinks = [
