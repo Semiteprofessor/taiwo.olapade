@@ -18,38 +18,37 @@ const More = () => {
     {
       title: "Dev.to",
       description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Dev.to ",
+        "I write blogs on web development, trending tech stacks or JavaScript tips on Dev.to.",
       link: "https://dev.to/taiwo_olapade_3df4ffc6d2f",
     },
     {
       title: "Hashnode",
       description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Hashnode",
+        "I share articles on web development, modern tech stacks, and JavaScript guides on Hashnode.",
       link: "https://hashnode.com/@semiteprofessor",
     },
     {
       title: "Medium",
       description:
-        "I write blogs on web development, trending tech stacks or javascript guide or tips in Medium",
+        "I publish blogs on development, technology, and tutorials on Medium.",
       link: "https://medium.com/@semiteprofessor",
     },
-
     {
       title: "Daily.Dev",
       description:
-        "I am also the member of Daily Dev squads and i also upload post on some squads.",
+        "I’m part of Daily.Dev squads where I contribute posts and discussions.",
       link: "https://app.daily.dev/taiwoolapade",
     },
     {
       title: "Gumroad",
       description:
-        "I also sell digital products on gumroad like Notion Templates and web projects etc..",
+        "I sell digital products such as Notion templates and web projects on Gumroad.",
       link: "https://semiteprofessor.gumroad.com/",
     },
     {
-      title: "Buy Me a coffee",
+      title: "Buy Me a Coffee",
       description:
-        "Your support goes a long way in helping me maintain the quality of content, explore new topics, and dedicate more time to creating valuable projects.",
+        "Support my work to help me create more valuable content and projects.",
       link: "https://buymeacoffee.com/semiteprofv",
     },
   ];
@@ -57,49 +56,55 @@ const More = () => {
   return (
     // ABOUT PAGE
     <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge className=" gap-2">
+      {/* Badge */}
+      <Badge className="gap-2">
         <PackagePlus className="h-5 w-5" />
         More
       </Badge>
+
+      {/* Heading */}
       <div className="flex flex-col gap-3">
         <Heading>More</Heading>
       </div>
-      <div className="h-auto w-full flex flex-wrap gap-3 p-2">
-        {morelink.map((value, indx) => {
-          return (
-            <FramerWrapper
-              key={indx}
-              className="max-w-[32%] max-lg:max-w-full"
-              y={0}
-              scale={0.8}
-              delay={indx / 4}
-              duration={0.15}
-            >
-              <Card className="w-full">
-                <CardHeader>
-                  <CardTitle>{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base font-poppins">{value.description}</p>
-                </CardContent>
-                <CardFooter>
-                  <Link
-                    href={value.link}
-                    target="blank"
-                    className={cn(
-                      buttonVariants({ variant: "default", size: "lg" }),
-                      "w-full gap-3"
-                    )}
-                  >
-                    {" "}
-                    <ExternalLink />
-                    Visit here
-                  </Link>
-                </CardFooter>
-              </Card>
-            </FramerWrapper>
-          );
-        })}
+
+      {/* Responsive Grid */}
+      <div className="h-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-2">
+        {morelink.map((value, indx) => (
+          <FramerWrapper
+            key={indx}
+            className="w-full"
+            y={0}
+            scale={0.9}
+            delay={indx / 6}
+            duration={0.2}
+          >
+            <Card className="w-full h-full flex flex-col justify-between">
+              <CardHeader>
+                <CardTitle className="text-lg sm:text-xl">
+                  {value.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-base font-poppins text-primary">
+                  {value.description}
+                </p>
+              </CardContent>
+              <CardFooter>
+                <Link
+                  href={value.link}
+                  target="_blank"
+                  className={cn(
+                    buttonVariants({ variant: "default", size: "lg" }),
+                    "w-full gap-3"
+                  )}
+                >
+                  <ExternalLink />
+                  Visit here
+                </Link>
+              </CardFooter>
+            </Card>
+          </FramerWrapper>
+        ))}
       </div>
     </div>
   );
