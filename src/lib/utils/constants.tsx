@@ -166,13 +166,6 @@ export const database = [
 
 export const projects = [
   {
-    title: "Access Insurance",
-    image: "/images/devzone.png",
-    description: `An Insurance Brokerage App by Access Bank.`,
-    tags: ["Redux", "Nextjs"],
-    link: "https://www.accessbankplc.com/bancassurance",
-  },
-  {
     title: "3XG Africa",
     image: "/images/devzone.png",
     description:
@@ -200,5 +193,19 @@ export const projects = [
     description: "A freelancer job Marketplace",
     tags: ["Node.js", "Microservices", "Elasticsearch", "RabbitMq", "React"],
     link: "https://jobberrr.vercel.app/",
+  },
+  {
+    title: "BeeCron",
+    image: "/images/devzone.png",
+    description: `An event management app.`,
+    tags: ["Node.js", "Redux", "Nextjs", "Shadcn/ui", "Typescript"],
+    link: "https://www.beecron.com",
+  },
+  {
+    title: "Access Insurance",
+    image: "/images/devzone.png",
+    description: `An Insurance Brokerage App by Access Bank.`,
+    tags: ["Redux", "Nextjs"],
+    link: "https://www.accessbankplc.com/bancassurance",
   },
 ];
