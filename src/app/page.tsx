@@ -10,7 +10,7 @@ export const siteConfig = {
   name: "Taiwo Olapade",
   description: "I am a passionate Software Developer.",
   ogImage: "",
-  url: "http://taiwo-olapade.vercel.app",
+  url: "https://i.postimg.cc/MThFwNR3/taiwo.png",
 };
 export default function Home() {
   return (
