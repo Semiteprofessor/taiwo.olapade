@@ -9,8 +9,8 @@ import WaveCard from "@/components/WaveCard";
 export const siteConfig = {
   name: "Taiwo Olapade",
   description: "I am a passionate Software Developer.",
-  ogImage: "",
-  url: "https://i.postimg.cc/MThFwNR3/taiwo.png",
+  ogImage: "https://i.postimg.cc/MThFwNR3/taiwo.png",
+  url: "https://taiwo-olapade.vercel.app",
 };
 export default function Home() {
   return (
